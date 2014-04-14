@@ -1,8 +1,10 @@
 TREXX Readme
 ============
 
-TODO (put your name by something when you are working on it, put COMPLETED by it when it's done):
+TODO
 -------------------------------------------------------------------------------------------------
+(put your name by something when you are working on it, put COMPLETED by it when it's done)
+
 1)Push the game
 2)Google+ script
    2.1)Receive message as single string input
@@ -30,18 +32,18 @@ What Does It Do?
 ----------------
 This projects demonstrates the power of REXX as a character manipulation language and glue language.  Along with the REXX program is a text-adventure game written in Racket, and some Python scripts that can post an input message to social media.  Users need only to run the REXX program, and it will handle running the game and posting select messages regarding the players' experience in the game to social media.  REXX is used not only to parse and format output from the game, but also serves as a "glue" between the game and the scripts.
 
-What You Need:
---------------
+What You Need
+-------------
 Python
 REXX
 Racket
 The files in this repository
 
-How to Run the Game:
---------------------
+How to Run the Game
+-------------------
 Make sure that all the files in this repo are in the same directory, and ensure that you have the above languages installed.  Then, simply run the REXX program and watch the magic happen!
 
 
-How to Play:
-------------
+How to Play
+-----------
 Pfft...Figure that out yourself :P
