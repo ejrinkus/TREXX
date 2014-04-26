@@ -1,0 +1,17 @@
+Instructions
+Text Adventure Game to Social Media
+Behnam Litkouhi
+
+Requirements:
+    Regina Rexx
+    Racket
+    Behnam Litkouhi's text adventure game
+
+Usage:
+    From terminal in folder containing the play.rexx file, enter:
+        rexx play racket_path,world_rkt_path,google_plus_script
+    where:
+        racket_path is the path to the Racket command-line executable
+        world_rkt_path is the path of world.rkt
+        google_plus_script is the Google Plus posting script
+    
