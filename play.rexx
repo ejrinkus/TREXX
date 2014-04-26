@@ -8,17 +8,10 @@
 /* Usage: rexx play.rexx [racket path],[text adventure path],[Google+ command] */
  
 /* Parse initial arguments */ 
-say "Initial argument: " arg(1)
-
 in_arg = arg(1)
 parse var in_arg racket_path ',' adventure_path ',' google_plus
 
-say "Racket path is: " racket_path
-say "Adventure path is: " adventure_path
-say "Google+ path is: " google_plus
-
 play = '"'||racket_path||'"'||' '||'"'||adventure_path||'"'||' | '||'"tee" "results"'
-say play
 
 play
 
