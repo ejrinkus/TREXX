@@ -1,2 +1,6 @@
 .idea/
 gplus/sample.dat
+gplus/apiclient/*.pyc
+gplus/httplib2/*.pyc
+gplus/oauth2client/*.pyc
+gplus/uritemplate/*.pyc
