@@ -12,7 +12,6 @@ in_arg = arg(1)
 parse var in_arg racket_path ',' adventure_path ',' google_plus
 parse source operating_system invocation_type rexx_version
 os=0
-say racket_path
 if (operating_system = 'WIN32') then
   os=1
 
@@ -20,8 +19,6 @@ if (os=1) then
 	play = racket_path adventure_path '|' tee '-file' results
 else
 	play = '"'||racket_path||'"'||' '||'"'||adventure_path||'"'||' | '||'"tee" "results"'
-	
-say play
 
 play
 
@@ -81,7 +78,9 @@ do while (lines(file)\=0 & done=0)
 end
 
 if (done=1) then do
-    say message
+    python_str = 'python '||google_plus||' '||'"'||message||'"'
+    say python_str
+    python_str
 end
 else do
     say "The game was not finished, so there are no results to share with all of your friends."
@@ -91,3 +90,4 @@ if (os=1) then
     "del " file 
 else
 	"rm " file
+
