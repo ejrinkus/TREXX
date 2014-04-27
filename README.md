@@ -8,23 +8,29 @@ The rexx script will run the game.  You can play the game directly�
 What You Need  
 -------------
 Python 2.7
+
 Regina REXX
+
 Racket
+
 All three interpreters should be included in your path.
+
 Ensure you have a Google+ account and Twitter account
+
 **UNIX ONLY** 
   
 How to Run the Game  
 -------------------
 1)Open terminal in the root folder (trexx) of the project
 
-2)Type: racket,txtadv/world.rkt,gplus/gplus.py
+2)Type: rexx racket,txtadv/world.rkt,gplus/gplus.py
 
 3)To find your g+ post:
   1. Make sure you are logged into g+
   2. Go plus.google.com/apps
-  3. Click on Project Default Service Account
-  4. Select the drop down menu and select the post that allows you to post directly to your wall
+  3. Click on "Project Default Service Account"
+  4. Select the drop down menu (should also be "Project Default Service Account").
+  5. Here you should see your activity, which you may choose to share on your home stream.
   
 How to Play  
 -----------
