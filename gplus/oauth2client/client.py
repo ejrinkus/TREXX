@@ -1229,7 +1229,7 @@ class OAuth2WebServerFlow(Flow):
         'client_id': self.client_id,
         'redirect_uri': self.redirect_uri,
         'scope': self.scope,
-        'request_visible_actions': 'http://schemas.google.com/CreateActivity'
+        'request_visible_actions': 'http://schemas.google.com/AddActivity'
     }
     query_params.update(self.params)
     return _update_query_params(self.auth_uri, query_params)

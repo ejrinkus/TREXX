@@ -16,12 +16,12 @@
 
 """Command-line skeleton application for Google+ API.
 Usage:
-  $ python sample.py
+  $ python gplus.py
 
 You can also get help on all the command-line flags the program understands
 by running:
 
-  $ python sample.py --help
+  $ python gplus.py --help
 
 """
 
@@ -44,7 +44,7 @@ parser = argparse.ArgumentParser(
 # Add one or more of the following scopes. PLEASE ONLY ADD THE SCOPES YOU
 # NEED. For more information on using scopes please see
 # <https://developers.google.com/+/best-practices>.
-FLOW = client.flow_from_clientsecrets('client_secrets.json',
+FLOW = client.flow_from_clientsecrets('gplus/client_secrets.json',
                                       scope=[
                                           'https://www.googleapis.com/auth/plus.login',
                                           'https://www.googleapis.com/auth/plus.me',
@@ -52,18 +52,21 @@ FLOW = client.flow_from_clientsecrets('client_secrets.json',
                                           'profile',
                                       ],
                                       redirect_uri='urn:ietf:wg:oauth:2.0:oob',
-                                      message=tools.message_if_missing('client_secrets.json'))
+                                      message=tools.message_if_missing('gplus/client_secrets.json'))
 
 
 def main(argv):
     # Parse the command-line flags.
-    flags = parser.parse_args(argv[1:])
+    flags = parser.parse_args(argv[1:-1])
+    string = argv[-1]
 
     # If the credentials don't exist or are invalid run through the native client
     # flow. The Storage object will ensure that if successful the good
     # credentials will get written back to the file.
-    storage = file.Storage('sample.dat')
-    credentials = tools.run_flow(FLOW, storage, flags)
+    storage = file.Storage('gplus/sample.dat')
+    credentials = storage.get()
+    if credentials is None or credentials.invalid:
+        credentials = tools.run_flow(FLOW, storage, flags)
 
     # Create an httplib2.Http object to handle our HTTP requests and authorize it
     # with our good Credentials.
@@ -79,14 +82,12 @@ def main(argv):
                   "target": {
                       "id": "target-id-1",
                       "type": "http://schemas.google.com/AddActivity",
-                      "name": "The Google+ Platform",
-                      "description": "A page that describes just how awesome Google+ is!",
-                      "image": "https://developers.google.com/+/plugins/snippet/examples/thing.png"
+                      "name": string,
+                      "description": "TREXX Posting",
                   }
         }
         google_request = service.moments().insert(userId='me', collection='vault', body=moment)
         result = google_request.execute()
-        print 'win'
 
     except client.AccessTokenRefreshError:
         print ("The credentials have been revoked or expired, please re-run"

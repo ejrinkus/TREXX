@@ -10,8 +10,18 @@
 /* Parse initial arguments */ 
 in_arg = arg(1)
 parse var in_arg racket_path ',' adventure_path ',' google_plus
+parse source operating_system invocation_type rexx_version
+os=0
+say racket_path
+if (operating_system = 'WIN32') then
+  os=1
 
-play = '"'||racket_path||'"'||' '||'"'||adventure_path||'"'||' | '||'"tee" "results"'
+if (os=1) then
+	play = racket_path adventure_path '|' tee '-file' results
+else
+	play = '"'||racket_path||'"'||' '||'"'||adventure_path||'"'||' | '||'"tee" "results"'
+	
+say play
 
 play
 
@@ -77,4 +87,7 @@ else do
     say "The game was not finished, so there are no results to share with all of your friends."
 end
 
-"rm " file 
+if (os=1) then
+    "del " file 
+else
+	"rm " file
