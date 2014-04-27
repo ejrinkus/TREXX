@@ -9,7 +9,7 @@
  
 /* Parse initial arguments */ 
 in_arg = arg(1)
-parse var in_arg racket_path ',' adventure_path ',' google_plus ',' tweetter
+parse var in_arg racket_path ',' adventure_path ',' google_plus
 parse source operating_system invocation_type rexx_version
 
 if (operating_system = 'WIN32') then do
@@ -76,19 +76,8 @@ else do
 	end
 	
 	if (done=1) then do
-		say "1. Post to G+\n2. Tweet on Twittter"
-		Pull where
-		if(where=1) then do
-			python_str = 'python '||google_plus||' '||'"'||message||'"'
-			python_str
-		end
-		else if(where=1) then do
-			python_str = 'python '||tweetter||' '||'"'||message||'"'
-			python_str
-		end
-		else do
-			say "You have choosen not to post about you fun game experience!"
-		end
+		python_str = 'python '||google_plus||' '||'"'||message||'"'
+		python_str
 	end
 	else do
 		say "The game was not finished, so there are no results to share with all of your friends."

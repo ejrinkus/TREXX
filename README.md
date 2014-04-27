@@ -3,7 +3,7 @@
   
 What Does It Do?  
 ----------------
-The rexx script will run the game.  You can play the game directly in the terminal.  Once the user has won or lost, the output will be posted to an authenticated account(s) in Twitter/Google+
+The rexx script will run the game.  You can play the game directly in the terminal.  Once the user has won or lost, the output will be posted to an authenticated account on Google+
   
 What You Need  
 -------------
@@ -15,7 +15,7 @@ Racket
 
 All three interpreters should be included in your path.
 
-Ensure you have a Google+ account and Twitter account
+Ensure you have a Google+ account
 
 
   
@@ -23,9 +23,9 @@ How to Run the Game
 -------------------
 1)Open terminal in the root folder (trexx) of the project
 
-2)(UNIX) Type: rexx racket,txtadv/world.rkt,gplus/gplus.py,twitter/tweet.py
+2)(UNIX) Type: rexx racket,txtadv/world.rkt,gplus/gplus.py
 
-  (Windows) Type: rexx "racket,txtadv/world.rkt,gplus/gplus.py,twitter/tweet.py"
+  (Windows) Type: rexx "racket,txtadv/world.rkt,gplus/gplus.py"
 
 3)To find your g+ post:
   1. Make sure you are logged into g+
