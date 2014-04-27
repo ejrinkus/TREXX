@@ -79,7 +79,6 @@ end
 
 if (done=1) then do
     python_str = 'python '||google_plus||' '||'"'||message||'"'
-    say python_str
     python_str
 end
 else do
