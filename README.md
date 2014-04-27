@@ -1,4 +1,4 @@
-TREXX Readme  
+﻿TREXX Readme  
 ============  
   
 What Does It Do?  
@@ -23,7 +23,7 @@ How to Run the Game
 -------------------
 1)Open terminal in the root folder (trexx) of the project
 
-2)Type: rexx racket,txtadv/world.rkt,gplus/gplus.py
+2)Type: rexx racket,txtadv/world.rkt,gplus/gplus.py,twitter/tweet.py
 
 3)To find your g+ post:
   1. Make sure you are logged into g+
