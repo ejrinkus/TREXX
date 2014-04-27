@@ -1,6 +1,6 @@
 /* Text Adventure to Social Media
  * A Rexx script
- * Author: Behnam Litkouhi
+ * Author: Behnam Litkouhi, Eric Rinkus, John Thomas, Maegan Sobel
  * Purpose: Uses a REXX script to play a text adventure game in Racket
  * and automatically post it to several social media websites.
  */

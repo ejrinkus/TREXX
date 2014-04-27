@@ -1,11 +1,11 @@
 /* Text Adventure to Social Media
  * A Rexx script
- * Author: Behnam Litkouhi
+ * Author: Behnam Litkouhi, Eric Rinkus, John Thomas, Maegan Sobel
  * Purpose: Uses a REXX script to play a text adventure game in Racket
  * and automatically post it to several social media websites.
  */
  
-/* Usage: rexx play.rexx [racket path],[text adventure path],[Google+ command] */
+/* Usage: don't */
  
 /* Parse initial arguments */ 
 in_arg = arg(1)
