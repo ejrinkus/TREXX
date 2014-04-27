@@ -71,8 +71,19 @@ do while (lines(file)\=0 & done=0)
 end
 
 if (done=1) then do
-    python_str = 'python '||google_plus||' '||'"'||message||'"'
-    python_str
+    say "1. Post to G+\n2. Tweet on Twittter"
+		Pull where
+		if(where=1) then do
+			python_str = 'python '||google_plus||' '||'"'||message||'"'
+			python_str
+		end
+		else if(where=1) then do
+			python_str = 'python '||tweetter||' '||'"'||message||'"'
+			python_str
+		end
+		else do
+			say "You have choosen not to post about you fun game experience!"
+		end
 end
 else do
     say "The game was not finished, so there are no results to share with all of your friends."

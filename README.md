@@ -1,4 +1,4 @@
-TREXX Readme  
+﻿TREXX Readme  
 ============  
   
 What Does It Do?  
@@ -17,13 +17,15 @@ All three interpreters should be included in your path.
 
 Ensure you have a Google+ account and Twitter account
 
-**UNIX ONLY** 
+
   
 How to Run the Game  
 -------------------
 1)Open terminal in the root folder (trexx) of the project
 
-2)Type: rexx racket,txtadv/world.rkt,gplus/gplus.py
+2)(UNIX) Type: rexx racket,txtadv/world.rkt,gplus/gplus.py,twitter/tweet.py
+
+  (Windows) Type: rexx "racket,txtadv/world.rkt,gplus/gplus.py,twitter/tweet.py"
 
 3)To find your g+ post:
   1. Make sure you are logged into g+
